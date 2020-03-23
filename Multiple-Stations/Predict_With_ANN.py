@@ -3,7 +3,8 @@ import numpy as np
 import pickle
 #import tables
 from scipy.io import loadmat
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from tensorflow.python.framework import ops
 #import matlplotlib.pyplot as plt 
 
