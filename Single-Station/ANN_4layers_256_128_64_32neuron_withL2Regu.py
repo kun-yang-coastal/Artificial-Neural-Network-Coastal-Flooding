@@ -80,11 +80,11 @@ def initialize_parameters():
 	b1 = tf.get_variable("b1", [256, 1], initializer = tf.zeros_initializer())
 	W2 = tf.get_variable("W2", [128, 256], initializer = tf.keras.initializers.glorot_normal())
 	b2 = tf.get_variable("b2", [128, 1], initializer = tf.zeros_initializer())
-	W3 = tf.get_variable("W3", [64, 128], initializer = tf.tf.keras.initializers.glorot_normal())
+	W3 = tf.get_variable("W3", [64, 128], initializer = tf.keras.initializers.glorot_normal())
 	b3 = tf.get_variable("b3", [64, 1], initializer = tf.zeros_initializer())
-	W4 = tf.get_variable("W4", [32, 64], initializer = tf.tf.keras.initializers.glorot_normal())
+	W4 = tf.get_variable("W4", [32, 64], initializer = tf.keras.initializers.glorot_normal())
 	b4 = tf.get_variable("b4", [32, 1], initializer = tf.zeros_initializer())
-	W5 = tf.get_variable("W5", [1, 32], initializer = tf.tf.keras.initializers.glorot_normal())
+	W5 = tf.get_variable("W5", [1, 32], initializer = tf.keras.initializers.glorot_normal())
 	b5 = tf.get_variable("b5", [1, 1], initializer = tf.zeros_initializer())
 	
 	parameters = {"W1": W1,
