@@ -5,7 +5,8 @@ import math
 import numpy as np
 #import tables
 from scipy.io import loadmat
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from tensorflow.python.framework import ops
 #import matlplotlib.pyplot as plt
 
@@ -71,11 +72,11 @@ def initialize_parameters():
 	b3.shape = [1, 1]
 	"""
 	
-	W1 = tf.get_variable("W1", [256, 5], initializer = tf.contrib.layers.xavier_initializer())
+	W1 = tf.get_variable("W1", [256, 5], initializer = tf.keras.initializers.glorot_normal())
 	b1 = tf.get_variable("b1", [256, 1], initializer = tf.zeros_initializer())
-	W2 = tf.get_variable("W2", [256, 256], initializer = tf.contrib.layers.xavier_initializer())
+	W2 = tf.get_variable("W2", [256, 256], initializer = tf.keras.initializers.glorot_normal())
 	b2 = tf.get_variable("b2", [256, 1], initializer = tf.zeros_initializer())
-	W3 = tf.get_variable("W3", [71212, 256], initializer = tf.contrib.layers.xavier_initializer())
+	W3 = tf.get_variable("W3", [71212, 256], initializer = tf.keras.initializers.glorot_normal())
 	b3 = tf.get_variable("b3", [71212, 1], initializer = tf.zeros_initializer())
 	
 	parameters = {"W1": W1,
